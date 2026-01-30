@@ -1,3 +1,27 @@
+/* CSS Custom Properties for consistent theming */
+:root {
+  --color-primary: #c1272d;
+  --color-primary-dark: #9a1f24;
+  --color-primary-light: #ae2329;
+  --color-text-dark: #333;
+  --color-text-light: #555;
+  --color-text-muted: #767676;
+  --color-background: #fcfaf9;
+  --color-white: #fff;
+  --color-accent-blue: #2777c1;
+  --color-accent-blue-dark: #1f639a;
+  
+  /* Typography */
+  --font-family: "Rubik", sans-serif;
+  
+  /* Spacing */
+  --container-max-width: 130rem;
+  
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,8 +29,6 @@
 }
 
 html {
-  /* font-size: 10px; */
-
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
@@ -15,13 +37,42 @@ html {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: var(--font-family);
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: var(--color-text-light);
 
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
+}
+
+/* Improve focus visibility for accessibility */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 /* 
@@ -32,7 +83,7 @@ body {
 Colors: #C1272D , #fcfaf9; #333
 */
 .container {
-  max-width: 130rem;
+  max-width: var(--container-max-width);
   margin: 0 auto;
 }
 

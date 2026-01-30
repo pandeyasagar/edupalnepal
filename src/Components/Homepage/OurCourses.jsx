@@ -1,127 +1,144 @@
 import styles from "./OurCourses.module.css";
 
-export default function ourCourses() {
+export default function OurCourses() {
   return (
-    <section className={styles["section-courses"]} id="our-courses">
+    <section className={styles["section-courses"]} id="our-courses" aria-labelledby="courses-heading">
       <div className="container center-text">
-        <p className="subheading">Our Courses</p>
-        <h2 className="heading-secondary">Top Courses By Top Instructors</h2>
+        <p className="subheading">Popular Courses in Dhangadhi</p>
+        <h2 className="heading-secondary" id="courses-heading">
+          Best Loksewa, Language &amp; Banking Classes in Sudurpaschim
+        </h2>
       </div>
 
       <div className="container courses-grid grid grid--3-cols margin-bottom-md">
-        <div className={styles["courses"]}>
+        {/* Loksewa Course */}
+        <article className={styles["courses"]}>
           <img
             src="./Courses-imgs/Courses-loksewa-100.jpg"
-            alt="courses of edupalnepal"
+            alt="Best Loksewa preparation class in Dhangadhi - Nasu, Kharidaar, Sakha Adhikrit coaching"
             className={styles["course-img"]}
+            loading="lazy"
           />
 
           <div className={styles["courses-content"]}>
-            <p className={styles["course-title"]}>Loksewa Tayari</p>
+            <h3 className={styles["course-title"]}>Loksewa Preparation</h3>
             <ul className={styles["course-list"]}>
               <li className={styles["course-item"]}>
                 <ion-icon
                   class={styles["right-icon"]}
                   name="caret-forward-outline"
+                  aria-hidden="true"
                 ></ion-icon>{" "}
-                Na.su
+                Nasu (नासु) Preparation
               </li>
               <li className={styles["course-item"]}>
                 <ion-icon
                   class={styles["right-icon"]}
                   name="caret-forward-outline"
+                  aria-hidden="true"
                 ></ion-icon>{" "}
-                Kharidaar
+                Kharidaar (खरिदार) Coaching
               </li>
               <li className={styles["course-item"]}>
                 <ion-icon
                   class={styles["right-icon"]}
                   name="caret-forward-outline"
+                  aria-hidden="true"
                 ></ion-icon>{" "}
-                Sakha Adhikrit
+                Sakha Adhikrit Class
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div className={styles["courses"]}>
+        {/* Korean Language Course */}
+        <article className={styles["courses"]}>
           <img
-            src="./Courses-imgs/Courses-TSC-100.jpg"
-            alt="courses of edupalnepal"
+            src="./Courses-imgs/Courses-bhasa-100.jpg"
+            alt="Korean language class in Nepal - EPS TOPIK preparation at Edupalnepal Dhangadhi"
             className={styles["course-img"]}
+            loading="lazy"
           />
 
           <div className={styles["courses-content"]}>
-            <p className={styles["course-title"]}>TSC Tayari</p>
+            <h3 className={styles["course-title"]}>Korean Language Class</h3>
             <ul className={styles["course-list"]}>
               <li className={styles["course-item"]}>
                 <ion-icon
                   class={styles["right-icon"]}
                   name="caret-forward-outline"
+                  aria-hidden="true"
                 ></ion-icon>{" "}
-                Ma.Bi
+                EPS-TOPIK Preparation
               </li>
               <li className={styles["course-item"]}>
                 <ion-icon
                   class={styles["right-icon"]}
                   name="caret-forward-outline"
+                  aria-hidden="true"
                 ></ion-icon>{" "}
-                Pra.Bi
+                Korean Speaking Course
               </li>
               <li className={styles["course-item"]}>
                 <ion-icon
                   class={styles["right-icon"]}
                   name="caret-forward-outline"
+                  aria-hidden="true"
                 ></ion-icon>{" "}
-                Ni.Ma.Bi
+                Work Permit Assistance
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div className={styles["banking-course"]}>
-          <div className={styles["courses"]}>
-            <img
-              src="./Courses-imgs/Courses-banking-100.jpg"
-              alt="courses of edupalnepal"
-              className={styles["course-img"]}
-            />
+        {/* Banking Course */}
+        <article className={styles["courses"]}>
+          <img
+            src="./Courses-imgs/Courses-banking-100.jpg"
+            alt="Banking exam preparation in Dhangadhi - NRB, NBL, ADBL coaching at Edupalnepal"
+            className={styles["course-img"]}
+            loading="lazy"
+          />
 
-            <div className={styles["courses-content"]}>
-              <p className={styles["course-title"]}>Banking Tayari</p>
-              <ul className={styles["course-list"]}>
-                <li className={styles["course-item"]}>
-                  <ion-icon
-                    class={styles["right-icon"]}
-                    name="caret-forward-outline"
-                  ></ion-icon>
-                  ADBL
-                </li>
-                <li className={styles["course-item"]}>
-                  <ion-icon
-                    class={styles["right-icon"]}
-                    name="caret-forward-outline"
-                  ></ion-icon>
-                  NRB
-                </li>
-                <li className={styles["course-item"]}>
-                  <ion-icon
-                    class={styles["right-icon"]}
-                    name="caret-forward-outline"
-                  ></ion-icon>
-                  NBL
-                </li>
-              </ul>
-            </div>
+          <div className={styles["courses-content"]}>
+            <h3 className={styles["course-title"]}>Banking Exam Coaching</h3>
+            <ul className={styles["course-list"]}>
+              <li className={styles["course-item"]}>
+                <ion-icon
+                  class={styles["right-icon"]}
+                  name="caret-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>{" "}
+                NRB (Nepal Rastra Bank)
+              </li>
+              <li className={styles["course-item"]}>
+                <ion-icon
+                  class={styles["right-icon"]}
+                  name="caret-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>{" "}
+                NBL (Nepal Bank Limited)
+              </li>
+              <li className={styles["course-item"]}>
+                <ion-icon
+                  class={styles["right-icon"]}
+                  name="caret-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>{" "}
+                ADBL &amp; Other Banks
+              </li>
+            </ul>
           </div>
-        </div>
+        </article>
       </div>
 
+
       <div className={`${styles["container"]} ${styles["more-courses"]}`}>
-        <a href="#our-courses" className="link">
-          More courses &rarr;
+        <a href="#cta" className="link">
+          Enroll in a course &rarr;
         </a>
       </div>
     </section>
   );
 }
+
